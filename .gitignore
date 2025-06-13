@@ -1,14 +1,70 @@
-# macOS system files
+# =====================
+# Global ignores
+# =====================
 .DS_Store
-
-# Node modules
-**/node_modules/
-
-# Python cache
-**/__pycache__/
-
-# Logs
+Thumbs.db
 *.log
-
-# Env files
+*.tmp
+*.swp
 .env
+.env.*.local
+*.local
+node_modules/
+dist/
+build/
+coverage/
+.idea/
+.vscode/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pid
+*.seed
+*.bak
+*.backup
+
+# =====================
+# Frontend (React)
+# =====================
+bits-erp-frontend/node_modules/
+bits-erp-frontend/build/
+bits-erp-frontend/.env
+bits-erp-frontend/.env.local
+bits-erp-frontend/.next/
+bits-erp-frontend/.cache/
+bits-erp-frontend/.turbo/
+bits-erp-frontend/coverage/
+
+# =====================
+# Backend (Node.js + Express)
+# =====================
+bits-erp-backend/node_modules/
+bits-erp-backend/.env
+bits-erp-backend/.env.local
+bits-erp-backend/coverage/
+bits-erp-backend/logs/
+bits-erp-backend/tmp/
+
+# =====================
+# SQL Folder
+# =====================
+bits-erp-sql/__pycache__/
+bits-erp-sql/*.sqlite
+bits-erp-sql/*.db
+bits-erp-sql/*.log
+bits-erp-sql/*.bak
+
+# =====================
+# OS-specific
+# =====================
+*.DS_Store
+ehthumbs.db
+Icon?
+.Spotlight-V100
+.Trashes
+
+# =====================
+# Mac-specific
+# =====================
+.AppleDouble
+.LSOverride
