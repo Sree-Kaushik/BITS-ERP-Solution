@@ -1,4 +1,6 @@
-Project Overview
+BITS Campus ERP
+
+Project Overview:
 BITS Campus ERP is a production-ready university management system that demonstrates advanced full-stack development skills, database management concepts, and enterprise software architecture. Built with modern web technologies, it provides a complete solution for educational institution management.
 
  Key Achievements
@@ -70,7 +72,7 @@ Stored Procedures: Complex data operations
 Transaction Management: ACID compliance
 
 📁 Project Structure
-text
+
 bits-erp-system/
 ├── bits-erp-frontend/          # React.js Frontend
 │   ├── public/
@@ -129,12 +131,12 @@ PostgreSQL 14+: Download PostgreSQL
 Git: Download Git
 
 1. Clone the Repository
-bash
+
 git clone https://github.com/yourusername/bits-campus-erp.git
 cd bits-campus-erp
 2. Database Setup
 Start PostgreSQL Service
-bash
+
 # macOS (using Homebrew)
 brew services start postgresql
 
@@ -144,7 +146,7 @@ net start postgresql
 # Linux
 sudo systemctl start postgresql
 Create Database and Run Scripts
-bash
+
 # Connect to PostgreSQL
 psql postgres
 
@@ -157,7 +159,7 @@ psql postgres
 \i /path/to/bits-erp-sql/sample_data.sql
 \q
 3. Backend Setup
-bash
+
 # Navigate to backend directory
 cd bits-erp-backend
 
@@ -170,7 +172,7 @@ cp .env.example .env
 # Edit .env file with your database credentials
 nano .env
 Environment Variables (.env)
-text
+
 # Database Configuration
 DB_HOST=localhost
 DB_PORT=5432
@@ -187,14 +189,14 @@ PORT=3000
 NODE_ENV=development
 FRONTEND_URL=http://localhost:3001
 Start Backend Server
-bash
+
 # Development mode
 npm run dev
 
 # Production mode
 npm start
 4. Frontend Setup
-bash
+
 # Navigate to frontend directory
 cd bits-erp-frontend
 
@@ -210,12 +212,12 @@ npm start
 Development Mode
 Start Backend (Terminal 1):
 
-bash
+
 cd bits-erp-backend
 npm run dev
 Start Frontend (Terminal 2):
 
-bash
+
 cd bits-erp-frontend
 npm start
 Access Application:
@@ -225,7 +227,7 @@ Backend API: http://localhost:3000/api
 API Documentation: http://localhost:3000/api
 
 Demo Credentials
-text
+
 Admin:
 Username: admin
 Password: password
@@ -265,32 +267,32 @@ Views: Simplified data access for reporting
 Constraints: Data integrity and validation
 Indexes: Performance optimization
 
- API Documentation
+ API Documentation:
+ 
 Authentication Endpoints
-text
 POST /api/auth/login          # User login
 POST /api/auth/register       # User registration
 GET  /api/auth/profile        # Get user profile
 PUT  /api/auth/profile        # Update profile
 PUT  /api/auth/change-password # Change password
+
 Student Management
-text
 GET  /api/students            # List all students (admin/faculty)
 GET  /api/students/:id        # Get student details
 GET  /api/students/:id/grades # Get student grades
 GET  /api/students/:id/attendance # Get attendance record
+
 Academic System
-text
 GET  /api/academic/calendar   # Academic calendar
 GET  /api/academic/timetable/:studentId # Student timetable
 POST /api/academic/calendar   # Add calendar event (admin)
+
 Examination System
-text
 GET  /api/examinations        # List examinations
 POST /api/examinations/:id/register # Register for exam
 GET  /api/examinations/registrations/:studentId # Get registrations
+
 Campus Services
-text
 GET  /api/library/books/search # Search library books
 GET  /api/library/transactions/:studentId # Library history
 POST /api/library/issue       # Issue book
@@ -306,7 +308,6 @@ POST /api/fees/pay            # Process payment
 
  Testing
 Backend Testing
-bash
 cd bits-erp-backend
 
 # Run tests
@@ -315,7 +316,6 @@ npm test
 # Test API endpoints
 curl http://localhost:3000/api/health
 Frontend Testing
-bash
 cd bits-erp-frontend
 
 # Run React tests
@@ -336,15 +336,12 @@ SELECT * FROM students LIMIT 5;
  Deployment
 Production Build
 Frontend
-bash
 cd bits-erp-frontend
 npm run build
 Backend
-bash
 cd bits-erp-backend
 npm install --production
 Environment Configuration
-text
 NODE_ENV=production
 DB_HOST=your_production_db_host
 FRONTEND_URL=https://your-domain.com
@@ -406,14 +403,13 @@ Git Hooks: Pre-commit validation
 🐛 Troubleshooting
 Common Issues
 Database Connection Error
-bash
+
 # Check PostgreSQL service
 brew services list | grep postgresql
 
 # Restart PostgreSQL
 brew services restart postgresql
 Frontend Build Errors
-bash
 # Clear npm cache
 npm cache clean --force
 
@@ -421,14 +417,14 @@ npm cache clean --force
 rm -rf node_modules package-lock.json
 npm install
 Backend API Errors
-bash
+
 # Check environment variables
 cat .env
 
 # Verify database connection
 npm run test-db
 Debug Mode
-bash
+
 # Backend debug mode
 DEBUG=* npm run dev
 
@@ -462,6 +458,5 @@ React Team: For the fantastic frontend framework
 Node.js Community: For the robust backend ecosystem
 PostgreSQL Team: For the powerful database system
 
-Built with ❤️ for BITS Pilani Community
 
 This project demonstrates advanced full-stack development skills, database management expertise, and enterprise software architecture suitable for campus placement interviews and professional development portfolios.
